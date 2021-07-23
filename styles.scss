@@ -101,9 +101,15 @@ p {
   }
 }
 
+.attribution {
+  background-color: hsl(244, 50%, 20%);
+  color: $white;
+  padding: 20px;
+}
 @media (max-width: 375px) {
   .card {
     width: 90%;
+    margin-bottom: 20px;
   }
   h1,
   p,
