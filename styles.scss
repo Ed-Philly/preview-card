@@ -1,0 +1,139 @@
+@import "./colors";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  background-color: $darkestblue;
+  font-family: "Lexenda deca", sans-serif;
+
+  @media (max-width: 700px) {
+    padding-top: 30px;
+  }
+}
+
+.card {
+  background-color: $darkblue;
+  display: flex;
+  align-self: center;
+  width: 80%;
+  border-radius: 8px;
+
+  @media (max-width: 700px) {
+    flex-direction: column-reverse;
+
+    margin: auto;
+  }
+
+  & .item {
+    flex: 50%;
+
+    @media (max-width: 700px) {
+      flex: 100%;
+    }
+  }
+
+  &__main {
+    padding: 40px;
+  }
+
+  &__banner {
+    margin: 0;
+    padding: 0;
+    background-color: $violet;
+    background-blend-mode: overlay;
+    background-image: url("./images/image-header-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 0 8px 8px 0;
+
+    @media (max-width: 700px) {
+      border-radius: 8px 8px 0 0;
+    }
+    @media (max-width: 375px) {
+      min-height: 200px;
+    }
+  }
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  color: $white;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  color: $white-varaint1;
+}
+.accent {
+  color: $violet;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+}
+.stats {
+  margin-right: 8px;
+  h3 {
+    color: $white;
+    margin: 20px 0 5px 0;
+    font-family: "Inter", sans-serif;
+  }
+  p {
+    color: $white-varaint2;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 90%;
+  }
+  h1,
+  p,
+  h3 {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.25em;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .stats {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  h1,
+  p,
+  h3 {
+    text-align: center;
+  }
+}

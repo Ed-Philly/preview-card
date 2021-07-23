@@ -1,0 +1,171 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  background-color: #090b1a;
+  font-family: "Lexenda deca", sans-serif;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-top: 30px;
+  }
+}
+
+.card {
+  background-color: #1b1938;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 80%;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: auto;
+  }
+}
+
+.card .item {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+@media (max-width: 700px) {
+  .card .item {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.card__main {
+  padding: 40px;
+}
+
+.card__banner {
+  margin: 0;
+  padding: 0;
+  background-color: #aa5cdb;
+  background-blend-mode: overlay;
+  background-image: url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 300px;
+  width: 100%;
+  border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 700px) {
+  .card__banner {
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .card__banner {
+    min-height: 200px;
+  }
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.accent {
+  color: #aa5cdb;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+}
+
+.stats {
+  margin-right: 8px;
+}
+
+.stats h3 {
+  color: white;
+  margin: 20px 0 5px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.stats p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 90%;
+  }
+  h1,
+  p,
+  h3 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.25em;
+  }
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .wrapper .stats {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  h1,
+  p,
+  h3 {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
