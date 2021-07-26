@@ -25,22 +25,22 @@ body {
   width: 80%;
   border-radius: 8px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 960px) {
     flex-direction: column-reverse;
-
+    max-width: 400px;
     margin: auto;
   }
 
   & .item {
     flex: 50%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 960px) {
       flex: 100%;
     }
   }
 
   &__main {
-    padding: 60px;
+    padding: 100px;
   }
 
   &__banner {
@@ -52,12 +52,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-
     width: 100%;
     border-radius: 0 8px 8px 0;
 
-    @media (max-width: 700px) {
+    @media (max-width: 960px) {
       border-radius: 8px 8px 0 0;
+      min-height: 400px;
     }
     @media (max-width: 375px) {
       min-height: 200px;
@@ -75,6 +75,8 @@ h1 {
 
 p {
   color: $white-varaint1;
+  font-size: 1em;
+  padding-right: 20px;
 }
 .accent {
   color: $violet;
@@ -85,6 +87,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 90%;
+  margin-top: 60px;
 }
 .stats {
   margin-right: 8px;
@@ -136,10 +139,19 @@ p {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 960px) {
   h1,
   p,
   h3 {
     text-align: center;
+  }
+  .wrapper {
+    align-content: center;
+    justify-content: center;
+
+    .stats {
+      margin-right: 0;
+      text-align: center;
+    }
   }
 }
